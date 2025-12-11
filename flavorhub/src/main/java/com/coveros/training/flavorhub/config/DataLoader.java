@@ -19,12 +19,28 @@ public class DataLoader implements CommandLineRunner {
     private final IngredientRepository ingredientRepository;
     private final RecipeRepository recipeRepository;
     private final UserPantryRepository userPantryRepository;
+    private final CompanyRepository companyRepository;
+    private final EmployeeRepository employeeRepository;
     
     @Override
     public void run(String... args) {
+        loadCompany();
+        loadEmployees();
         loadIngredients();
         loadRecipes();
         loadSamplePantry();
+    }
+    
+    private void loadCompany() {
+        Company company = new Company("FlavorHub Inc.", "123 Recipe Street, Culinary City, CA 90210");
+        companyRepository.save(company);
+    }
+    
+    private void loadEmployees() {
+        employeeRepository.save(new Employee("jdoe", "password123", "John", "Doe", "123-45-6789", "Software Engineer"));
+        employeeRepository.save(new Employee("asmith", "password456", "Alice", "Smith", "234-56-7890", "Product Manager"));
+        employeeRepository.save(new Employee("bjones", "password789", "Bob", "Jones", "345-67-8901", "QA Engineer"));
+        employeeRepository.save(new Employee("clee", "password321", "Carol", "Lee", "456-78-9012", "DevOps Engineer"));
     }
     
     private void loadIngredients() {

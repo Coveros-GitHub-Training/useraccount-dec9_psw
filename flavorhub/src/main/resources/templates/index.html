@@ -165,6 +165,18 @@
             
             <div class="features">
                 <div class="feature-card">
+                    <h3>🏢 Company Management</h3>
+                    <p>View and edit company information including name and address</p>
+                    <a href="/company" style="display: inline-block; margin-top: 10px; color: #667eea; text-decoration: none; font-weight: 500;">Manage Company →</a>
+                </div>
+                
+                <div class="feature-card">
+                    <h3>👥 Employee Management</h3>
+                    <p>Manage employee records with full CRUD operations</p>
+                    <a href="/employees" style="display: inline-block; margin-top: 10px; color: #667eea; text-decoration: none; font-weight: 500;">Manage Employees →</a>
+                </div>
+                
+                <div class="feature-card">
                     <h3>📦 Pantry Management</h3>
                     <p>Keep track of ingredients you have on hand with quantities and notes</p>
                 </div>
@@ -193,6 +205,34 @@
                 </p>
                 
                 <div class="api-endpoints">
+                    <div class="endpoint">
+                        <span class="method get">GET</span>
+                        <code>/api/company</code> - Get all companies
+                    </div>
+                    <div class="endpoint">
+                        <span class="method get">GET</span>
+                        <code>/api/company/{id}</code> - Get company by ID
+                    </div>
+                    <div class="endpoint">
+                        <span class="method put">PUT</span>
+                        <code>/api/company/{id}</code> - Update company
+                    </div>
+                    <div class="endpoint">
+                        <span class="method get">GET</span>
+                        <code>/api/employees</code> - Get all employees
+                    </div>
+                    <div class="endpoint">
+                        <span class="method post">POST</span>
+                        <code>/api/employees</code> - Create employee
+                    </div>
+                    <div class="endpoint">
+                        <span class="method put">PUT</span>
+                        <code>/api/employees/{id}</code> - Update employee
+                    </div>
+                    <div class="endpoint">
+                        <span class="method delete">DELETE</span>
+                        <code>/api/employees/{id}</code> - Delete employee
+                    </div>
                     <div class="endpoint">
                         <span class="method get">GET</span>
                         <code>/api/recipes</code> - Get all recipes
