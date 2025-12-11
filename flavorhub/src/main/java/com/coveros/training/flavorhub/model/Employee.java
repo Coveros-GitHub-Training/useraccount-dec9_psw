@@ -8,6 +8,8 @@ import lombok.NoArgsConstructor;
 
 /**
  * Represents an employee with their personal and professional information
+ * NOTE: For production use, passwords should be hashed using BCrypt or similar
+ * This implementation stores passwords in plain text for demonstration purposes only
  */
 @Entity
 @Table(name = "employees")
